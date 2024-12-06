@@ -15,36 +15,45 @@ export const RestaurantProvider = ({ children }) => {
   const [transactionIndex, setTransactionIndex] = useState(15);
   const transactionsPerPage = 5;
 
-  // Fetch data from localStorage on mount
+  // Check for browser environment
+  const isBrowser = typeof window !== "undefined";
+
+  // Fetch data from localStorage on mount (browser only)
   useEffect(() => {
-    const savedRestaurant = localStorage.getItem("selectedRestaurant");
-    if (savedRestaurant) setSelectedRestaurant(savedRestaurant);
+    if (isBrowser) {
+      const savedRestaurant = localStorage.getItem("selectedRestaurant");
+      if (savedRestaurant) setSelectedRestaurant(savedRestaurant);
 
-    const savedTransactions = localStorage.getItem("transactions");
-    if (savedTransactions) {
-      const parsedTransactions = JSON.parse(savedTransactions);
+      const savedTransactions = localStorage.getItem("transactions");
+      if (savedTransactions) {
+        const parsedTransactions = JSON.parse(savedTransactions);
 
-      // Ensure all transactions have valid fields
-      const sanitizedTransactions = parsedTransactions.map((t) => ({
-        ...t,
-        restaurantName: t.restaurantName || "Unknown Restaurant",
-        transactionDate: t.transactionDate || new Date().toISOString(),
-        amount: t.amount || 0,
-      }));
+        // Ensure all transactions have valid fields
+        const sanitizedTransactions = parsedTransactions.map((t) => ({
+          ...t,
+          restaurantName: t.restaurantName || "Unknown Restaurant",
+          transactionDate: t.transactionDate || new Date().toISOString(),
+          amount: t.amount || 0,
+        }));
 
-      setTransactions(sanitizedTransactions);
+        setTransactions(sanitizedTransactions);
+      }
     }
-  }, []);
+  }, [isBrowser]);
 
-  // Sync selected restaurant to localStorage
+  // Sync selected restaurant to localStorage (browser only)
   useEffect(() => {
-    localStorage.setItem("selectedRestaurant", selectedRestaurant);
-  }, [selectedRestaurant]);
+    if (isBrowser) {
+      localStorage.setItem("selectedRestaurant", selectedRestaurant);
+    }
+  }, [selectedRestaurant, isBrowser]);
 
-  // Sync transactions to localStorage
+  // Sync transactions to localStorage (browser only)
   useEffect(() => {
-    localStorage.setItem("transactions", JSON.stringify(transactions));
-  }, [transactions]);
+    if (isBrowser) {
+      localStorage.setItem("transactions", JSON.stringify(transactions));
+    }
+  }, [transactions, isBrowser]);
 
   // Function to add a new transaction
   const addTransaction = (transaction) => {
@@ -58,12 +67,13 @@ export const RestaurantProvider = ({ children }) => {
 
     setTransactions((prev) => {
       const updatedTransactions = [...prev, sanitizedTransaction];
-      localStorage.setItem("transactions", JSON.stringify(updatedTransactions));
+      if (isBrowser) {
+        localStorage.setItem("transactions", JSON.stringify(updatedTransactions));
+      }
       return updatedTransactions;
     });
   };
 
-  
   // Load more transactions
   const loadMoreTransactions = () => {
     setTransactionIndex((prev) => Math.min(prev + transactionsPerPage, transactions.length));
