@@ -8,9 +8,13 @@ function TransactionPage() {
       <Suspense 
         fallback={
           <div className="flex justify-center items-center h-screen">
-            {/* Font Awesome spinner */}
-            <i className="fas fa-ellipsis-h fa-spin text-indigo-900 text-7xl"></i>
+          {/* Horizontal moving Font Awesome spinner */}
+          <div className="flex space-x-4">
+            <i className="fas fa-circle text-indigo-700 text-2xl animate-horizontal-move"></i>
+            <i className="fas fa-circle text-indigo-700 text-2xl animate-horizontal-move [animation-delay:200ms]"></i>
+            <i className="fas fa-circle text-indigo-700 text-2xl animate-horizontal-move [animation-delay:400ms]"></i>
           </div>
+        </div>
         }
       >
       <TransactionDetails/>

@@ -10,7 +10,7 @@ function Form() {
         <input
           type="text"
           id="firstname"
-          value="DjSpykid"
+          value="Ayomide"
           readOnly
           className="w-full px-4 py-2 rounded-full border border-gray-300 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
         />
@@ -22,7 +22,7 @@ function Form() {
         <input
           type="text"
           id="lastname"
-          value="FRONTEND"
+          value="ADEGBITE"
           readOnly
           className="w-full px-4 py-2 rounded-full border border-gray-300 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
         />
@@ -34,7 +34,7 @@ function Form() {
         <input
           type="text"
           id="middlename"
-          value="Developer"
+          value="Fred"
           readOnly
           className="w-full px-4 py-2 rounded-full border border-gray-300 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
         />
@@ -46,7 +46,7 @@ function Form() {
         <input
           type="email"
           id="email"
-          value="djspykid849@gmail.com"
+          value="ayomideadegbite849@gmail.com"
           readOnly
           className="w-full px-4 py-2 rounded-full border border-gray-300 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
         />

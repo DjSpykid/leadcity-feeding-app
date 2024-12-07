@@ -21,7 +21,7 @@ function FeedingBalanceCard() {
       {/* Content */}
       <div className="relative text-center">
         <p className="text-xl font-normal opacity-90">Feeding Balance</p>
-        <p className="text-4xl font-bold mt-3">₦46,950.00</p>
+        <p className="text-4xl font-bold mt-3">₦36,250.00</p>
       </div>
     </div>
   );

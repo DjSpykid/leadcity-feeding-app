@@ -9,7 +9,7 @@ function ProfileHeader() {
       <Image src={Logo} alt="Leadcity Logo" className="w-36 mb-2" />
       
       {/* Name */}
-      <h1 className="text-xl font-sans font-medium text-black">SpyKid FRONTEND</h1>
+      <h1 className="text-2xl font-sans font-normal text-gray-600">Ayomide ADEGBITE</h1>
       
       {/* ID */}
       <h2 className="text-lg font-sans text-gray-600">LCU/UG/23/22245</h2>

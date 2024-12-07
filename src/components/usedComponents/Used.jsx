@@ -17,7 +17,7 @@ export default function Used() {
       <div className="flex-1 flex items-center justify-center">
         <div className="bg-white text-black p-6 rounded-2xl font-medium shadow-lg w-full max-w-sm space-y-5">
           <h1 className="text-lg font-bold text-center mb-4">
-            Transaction Details <span className="text-red-600">(Used)</span>
+            Transaction Details <span className="text-red-400">(Used)</span>
           </h1>
           <hr className="mb-3 bg-gray-400 " />
           <div className="space-y-4 text-sm">
@@ -53,7 +53,7 @@ export default function Used() {
             <p className="flex flex-col">
               <span className="font-medium">Amount</span>
               <span className="text-indigo-900 font-semibold text-xl">
-                ₦{amount ? parseFloat(amount).toLocaleString() : "0.00"}
+                ₦{amount ? parseFloat(amount).toFixed(2).toLocaleString() : "0.00"}
               </span>
             </p>
           </div>

@@ -2,16 +2,18 @@ import Footer from "@/components/Footer";
 import TextTransaction from "@/components/HistoryComponent/TextTransaction";
 import TransactionList from "@/components/HistoryComponent/TransactionList";
 import React, { Suspense } from "react";
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
 
 function History() {
   return (
     <Suspense
       fallback={
         <div className="flex justify-center items-center h-screen">
-          {/* Font Awesome spinner */}
-          <i className="fas fa-ellipsis-h fa-spin text-indigo-900 text-7xl"></i>
+          {/* Horizontal moving Font Awesome spinner */}
+          <div className="flex space-x-4">
+            <i className="fas fa-circle text-indigo-700 text-2xl animate-horizontal-move"></i>
+            <i className="fas fa-circle text-indigo-700 text-2xl animate-horizontal-move [animation-delay:200ms]"></i>
+            <i className="fas fa-circle text-indigo-700 text-2xl animate-horizontal-move [animation-delay:400ms]"></i>
+          </div>
         </div>
       }
     >

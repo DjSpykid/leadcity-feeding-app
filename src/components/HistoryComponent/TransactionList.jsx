@@ -54,10 +54,10 @@ const TransactionsList = () => {
           >
             {/* Delete Button */}
             <div
-              className="absolute right-2 top-2 text-white bg-red-500 rounded-full p-2 opacity-0 group-hover:opacity-100 cursor-pointer"
+              className="absolute right-0 bottom-0 text-white bg-gray-200 rounded-full p-2 opacity-0 group-hover:opacity-100 cursor-pointer"
               onClick={() => deleteTransaction(transaction)}
             >
-              <span className="text-sm">X</span>
+              <span className="text-sm text-red-200">X</span>
             </div>
 
             {/* Transaction Info */}
