@@ -7,7 +7,7 @@ function UsedPage() {
     fallback={
       <div className="flex justify-center items-center h-screen">
         {/* Font Awesome spinner */}
-        <i className="fas fa-ellipsis-h fa-spin text-indigo-700 text-4xl"></i>
+        <i className="fas fa-ellipsis-h fa-spin text-indigo-900 text-7xl"></i>
       </div>
     }
     >
