@@ -13,10 +13,10 @@ function Footer() {
 
   const isActive = (path) => pathname === path;   
   return (
-    <div className={`fixed bottom-0 z-50 flex items-center justify-between gap-4 px-6 py-7 w-full max-w-6xl mx-auto bg-white border-t border-gray-200`}>
+    <div className={`fixed bottom-0 z-50 flex items-center justify-between gap-2 px-5 py-4 w-full max-w-6xl mx-auto bg-white border-t border-gray-200`}>
     <div
-      className={`flex items-center justify-center cursor-pointer w-12 h-12 p-1 -border-2 border-gray-300 rounded-full ${
-        isActive("/") ? "bg-purple-100" : "bg-gray-100"
+      className={`flex items-center justify-center cursor-pointer w-12 h-12 p-1 -border-2 border-gray-100 rounded-full ${
+        isActive("/") ? "bg-purple-50" : "bg-gray-50"
       }`}
     >
       <Link href={"/"}>
@@ -25,8 +25,8 @@ function Footer() {
     </div>
   
     <div
-      className={`flex items-center justify-center cursor-pointer w-11 h-11 p-1 -border-2 border-gray-300 rounded-full ${
-        isActive("/history") ? "bg-purple-100" : "bg-gray-100"
+      className={`flex items-center justify-center cursor-pointer w-11 h-11 p-1 -border-2 border-gray-100 rounded-full ${
+        isActive("/history") ? "bg-purple-50" : "bg-gray-50"
       }`}
     >
       <Link href={"/history"}>
@@ -35,8 +35,8 @@ function Footer() {
     </div>
   
     <div
-      className={`flex items-center justify-center cursor-pointer w-11 h-11 p-1 -border-2 border-gray-300 rounded-full ${
-        isActive("/profile") ? "bg-purple-100" : "bg-gray-100"
+      className={`flex items-center justify-center cursor-pointer w-11 h-11 p-1 -border-2 border-gray-100 rounded-full ${
+        isActive("/profile") ? "bg-purple-50" : "bg-gray-50"
       }`}
     >
       <Link href={"/profile"}>

@@ -3,7 +3,7 @@ import React from 'react'
 function Text() {
   return (
     <div>
-        <h1 className='font-medium font-sans text-xl'>Available Resturants</h1>
+        <h1 className='font-medium font-sans text-2xl'>Available Resturants</h1>
     </div>
   )
 }
