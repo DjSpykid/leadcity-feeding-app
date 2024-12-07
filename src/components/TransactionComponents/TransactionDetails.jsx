@@ -86,7 +86,7 @@ export default function TransactionDetails() {
             </p>
             <p className="flex flex-col">
               <span className="font-medium">Amount</span>
-              <span className="text-indigo-900 font-bold text-xl">₦{parseFloat(amount).toLocaleString()}</span>
+              <span className="text-indigo-900 font-bold text-xl">₦{parseFloat(amount).toFixed(2).toLocaleString()}</span>
             </p>
           </div>
           {error && <p className="text-red-500">{error}</p>}

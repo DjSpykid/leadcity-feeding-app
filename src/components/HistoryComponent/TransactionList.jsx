@@ -21,9 +21,6 @@ const TransactionsList = () => {
     setSelectedRestaurant(restaurantName);
 
     router.push(
-      // /transaction?restaurantName=${encodeURIComponent(
-      //   restaurantName
-      // )}&amount=${encodeURIComponent(amount)}&transactionDate=${encodeURIComponent(transactionDate)}
       `/used?restaurantName=${encodeURIComponent(restaurantName)}&amount=${encodeURIComponent(amount)}&transactionDate=${encodeURIComponent(transactionDate)}`
     );
   };
@@ -48,12 +45,12 @@ const TransactionsList = () => {
   ).reverse();
 
   return (
-    <div className="min-h-screen p-1 mx-2 bg-white">
-      <div className="max-w-xl mx-auto p-1 space-y-2">
+    <div className="min-h-screen -p-3 mx-2 bg-white">
+      <div className="max-w-xl mx-auto p-1 space-y-3">
         {uniqueTransactions.slice(0, transactionIndex).map((transaction, index) => (
           <div
             key={index}
-            className="relative group flex items-center justify-between rounded-lg bg-gray-100 p-2 transition-transform duration-300 hover:bg-gray-200"
+            className="relative group flex items-center justify-between rounded-lg bg-gray-100 p-4 transition-transform duration-300 hover:bg-gray-200"
           >
             {/* Delete Button */}
             <div
@@ -68,16 +65,16 @@ const TransactionsList = () => {
               className="flex items-center gap-3 w-full"
               onClick={() => handleTransactionClick(transaction)}
             >
-              <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
+              <div className="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center">
                 <Image
                   src={kitchenLogo}
                   alt="Food Restaurant Icon"
-                  className="w-8 h-8"
+                  className="w-11 h-11"
                 />
               </div>
               <div>
-                <h2 className="font-bold font-sans">{transaction.restaurantName}</h2>
-                <p className="text-sm text-gray-500">
+                <h2 className="font-medium font-sans">{transaction.restaurantName}</h2>
+                <p className="text-sm text-gray-600">
                   {transaction.transactionDate
                     ? new Date(transaction.transactionDate).toLocaleString("en-GB", {
                         day: "2-digit",
@@ -92,7 +89,7 @@ const TransactionsList = () => {
                 </p>
               </div>
             </div>
-            <div className="text-xl font-bold text-indigo-900">
+            <div className="text-lg font-bold text-indigo-900">
               ₦{transaction.amount || "0"}
             </div>
           </div>
@@ -101,7 +98,7 @@ const TransactionsList = () => {
         {transactionIndex < uniqueTransactions.length && (
           <button
             onClick={loadMoreTransactions}
-            className="w-full py-3 text-white border border-blue-800 bg-indigo-900 rounded-full text-center font-medium transition"
+            className="w-full py-3 text-white border border-idigo-800 bg-indigo-900 rounded-full text-center font-medium transition"
           >
             Load More
           </button>

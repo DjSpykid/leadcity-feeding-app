@@ -18,7 +18,7 @@ function KitchenCard({ name, onClick }) {
         </div>
         
       </div>
-      <p className="text-base font-sans font-medium whitespace-nowrap overflow-hidden text-ellipsis">{name}</p>
+      <p className="text-base font-sans font-normal whitespace-nowrap overflow-hidden text-ellipsis">{name}</p>
 
     </div>
   );

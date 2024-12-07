@@ -1,7 +1,10 @@
 'use client';
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import ProceedToPay from "@/components/paymentComponent/ProceedToPay";
 import Cancelicon from "@/components/paymentComponent/Cancelicon";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 
 function ScanQRCode({ onClose }) {
   const [slideClass, setSlideClass] = useState("slide-up");
@@ -12,6 +15,15 @@ function ScanQRCode({ onClose }) {
   };
 
   return (
+    <Suspense
+    fallback={
+      <div className="flex justify-center items-center h-screen">
+        {/* Font Awesome spinner */}
+        <i className="fas fa-ellipsis-h fa-spin text-indigo-700 text-4xl"></i>
+      </div>
+    }
+    >
+
     <div
       className={`fixed inset-0 flex flex-col justify-center items-center bg-white shadow-lg transition-transform transform ${slideClass}`}
     >
@@ -26,6 +38,8 @@ function ScanQRCode({ onClose }) {
       </div>
       
     </div>
+          
+    </Suspense>
   );
 }
 

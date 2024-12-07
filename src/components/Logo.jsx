@@ -10,7 +10,7 @@ function Logo() {
         <Image 
           src={lcuLogo} 
           alt="Logo Image"
-          width={100}
+          width={80}
           className="object-contain"
         />
       </div>

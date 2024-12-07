@@ -12,7 +12,7 @@ export const useRestaurant = () => {
 export const RestaurantProvider = ({ children }) => {
   const [selectedRestaurant, setSelectedRestaurant] = useState("Default Restaurant");
   const [transactions, setTransactions] = useState([]);
-  const [transactionIndex, setTransactionIndex] = useState(15);
+  const [transactionIndex, setTransactionIndex] = useState(10);
   const transactionsPerPage = 5;
 
   // Check for browser environment
