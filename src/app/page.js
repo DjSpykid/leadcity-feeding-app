@@ -8,7 +8,7 @@ import Text from "@/components/Text";
 export default function Home({name}) {
   return (
     <> 
-    <div className="justify-center items-center p-4 mb-20 max-w-6xl mx-auto space-y-4">
+    <div className="justify-center items-center p-4 mb-20 max-w-6xl font-sans mx-auto space-y-3">
     <Header/>
     <FeedingBalanceCard />
     <Text/>

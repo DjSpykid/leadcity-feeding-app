@@ -6,10 +6,10 @@ function KitchenCard({ name, onClick }) {
   return (
     <div
       onClick={() => onClick(name)}
-      className="flex flex-col items-center justify-center p-5 bg-gray-100 rounded-xl shadow-md max-w-xs cursor-pointer"
+      className="flex font-serif flex-col items-center justify-center p-5 mb-4 bg-gray-100 rounded-lg shadow-md max-w-xs cursor-pointer"
     >
       <div className="mb-4">
-        <div className="flex items-center justify-center w-14 h-14 rounded-full border-2 border-gray-300 bg-white">
+        <div className="flex items-center justify-center w-16 h-16 rounded-full border-2 border-gray-300 bg-white">
           <Image
             src={kitchenLogo}
             alt="Food Restaurant Icon"
