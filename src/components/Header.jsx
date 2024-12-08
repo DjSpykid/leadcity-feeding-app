@@ -10,7 +10,7 @@ function Header() {
       </div>
 
       {/* Text */}
-      <p className="text-2xl  font-medium tracking-wide text-gray-900 text-center -ml-2">
+      <p className="text-2xl  font-medium tracking-wide text-gray-800 text-center -ml-2">
         Ayomide ADEGBITE
       </p>
     </div>

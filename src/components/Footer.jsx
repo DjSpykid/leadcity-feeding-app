@@ -13,7 +13,7 @@ function Footer() {
 
   const isActive = (path) => pathname === path;   
   return (
-    <div className={`fixed bottom-0 z-50 flex items-center  justify-between gap-2  w-full px-4 py-5 max-w-6xl mx-auto bg-white border-t border-gray-200`}>
+    <div className={`fixed bottom-0 z-50 flex items-center  justify-between gap-2  w-full px-7 py-5 max-w-6xl mx-auto bg-white border-t border-gray-200`}>
     <div
       className={`flex items-center justify-center cursor-pointer w-12 h-12 p-1 -border-2 border-gray-100 rounded-full ${
         isActive("/") ? "bg-purple-50" : "bg-gray-50"
@@ -25,17 +25,17 @@ function Footer() {
     </div>
   
     <div
-      className={`flex items-center justify-center cursor-pointer w-11 h-11 p-1 -border-2 border-gray-100 rounded-full ${
+      className={`flex items-center justify-center cursor-pointer w-12 h-12 p-1 -border-2 border-gray-100 rounded-full ${
         isActive("/history") ? "bg-purple-50" : "bg-gray-50"
       }`}
     >
       <Link href={"/history"}>
-        <AiOutlineInbox className="w-9 h-9" />
+        <AiOutlineInbox className="w-8 h-8" />
       </Link>
     </div>
   
     <div
-      className={`flex items-center justify-center cursor-pointer w-11 h-11  -border-2 border-gray-100 rounded-full ${
+      className={`flex items-center justify-center cursor-pointer w-12 h-12  -border-2 border-gray-100 rounded-full ${
         isActive("/profile") ? "bg-purple-50" : "bg-gray-50"
       }`}
     >

@@ -12,9 +12,9 @@ export default function Home({name}) {
       <div className="flex justify-center items-center h-screen">
       {/* Horizontal moving Font Awesome spinner */}
       <div className="flex space-x-4">
-        <i className="fas fa-circle text-indigo-700 text-2xl animate-horizontal-move"></i>
-        <i className="fas fa-circle text-indigo-700 text-2xl animate-horizontal-move [animation-delay:200ms]"></i>
-        <i className="fas fa-circle text-indigo-700 text-2xl animate-horizontal-move [animation-delay:400ms]"></i>
+        <i className="fas fa-circle text-indigo-700 text-lg animate-horizontal-move"></i>
+        <i className="fas fa-circle text-indigo-700 text-lg animate-horizontal-move [animation-delay:150ms]"></i>
+        <i className="fas fa-circle text-indigo-700 text-lg animate-horizontal-move [animation-delay:300ms]"></i>
       </div>
     </div>
     }

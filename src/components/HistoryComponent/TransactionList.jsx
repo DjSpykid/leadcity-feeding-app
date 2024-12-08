@@ -50,14 +50,14 @@ const TransactionsList = () => {
         {uniqueTransactions.slice(0, transactionIndex).map((transaction, index) => (
           <div
             key={index}
-            className="relative group flex items-center justify-between rounded-lg bg-gray-100 p-4 transition-transform duration-300 hover:bg-gray-200"
+            className="relative group flex items-center justify-between rounded-lg bg-gray-100 p-3 transition-transform duration-300 hover:bg-gray-200"
           >
             {/* Delete Button */}
             <div
               className="absolute right-0 bottom-0 text-white bg-gray-200 rounded-full p-2 opacity-0 group-hover:opacity-100 cursor-pointer"
               onClick={() => deleteTransaction(transaction)}
             >
-              <span className="text-sm text-red-200">X</span>
+              <span className="text-sm text-red-50">X</span>
             </div>
 
             {/* Transaction Info */}
@@ -98,7 +98,7 @@ const TransactionsList = () => {
         {transactionIndex < uniqueTransactions.length && (
           <button
             onClick={loadMoreTransactions}
-            className="w-full py-3 text-white border border-idigo-800 bg-indigo-900 rounded-full text-center font-medium transition"
+            className="w-full py-5 text-white border border-idigo-800 bg-indigo-900 rounded-full text-center font-medium transition"
           >
             Load More
           </button>
