@@ -50,7 +50,7 @@ const TransactionsList = () => {
         {uniqueTransactions.slice(0, transactionIndex).map((transaction, index) => (
           <div
             key={index}
-            className="relative group flex items-center justify-between rounded-lg bg-gray-100 p-3 transition-transform duration-300 hover:bg-gray-200"
+            className="relative group flex items-center justify-between rounded-lg bg-gray-100 p-3 transition-transform duration-300 hover:bg-gray-50"
           >
             {/* Delete Button */}
             <div
